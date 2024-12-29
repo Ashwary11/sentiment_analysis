@@ -87,7 +87,7 @@ if __name__ == "__main__":
     
     # Load the data
     df = load_kaggle_sentiment_data(file_path)
-    
+    prepared_df = None
     if df is not None:
         # Prepare the data
         prepared_df = prepare_sentiment_data(df)
@@ -107,10 +107,9 @@ if __name__ == "__main__":
         prepared_df = prepared_df.drop_duplicates(subset=['cleaned_text'])
 
         # Save the cleaned dataset
-        # prepared_df.to_csv('C:\Users\aakan\OneDrive\Desktop\anushka\sentimentAnalysis\data\cleaned_data\cleaned_dataset.csv')
         prepared_df.to_csv('C:\\sentiment_analysis\\data\\clean_data.csv', index=False)
 
-        print("Dataset cleaned and saved to 'cleaned_dataset.csv'")
+        print("Dataset cleaned and saved to 'clean_data.csv'")
             
 
 
